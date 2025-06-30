@@ -34,11 +34,11 @@ class Products:
         created = DatabaseProducts.create(
             name= passObj["name"],
             description= passObj["description"],
-            img_url= passObj["image_url"],
-            is_on_sale= passObj["name"],
+            image_url= passObj["image_url"],
             price= passObj["price"],
+            is_on_sale= passObj["is_on_sale"],
             sale_price= passObj["sale_price"]
         )
        
-        resp.stats = falcon.HTTP_201
+        resp.status = falcon.HTTP_201
         resp.media = model_to_dict(created)
