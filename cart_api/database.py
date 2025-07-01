@@ -11,7 +11,7 @@ from playhouse.postgres_ext import (
     CharField,
     DoubleField,
     BooleanField,
-    IntegerField
+    IntegerField,
 )
 
 database = os.environ.get("POSTGRES_DB", "bootcamp")
@@ -93,6 +93,7 @@ class DatabaseCartItem(BaseModel):
     name = CharField()
     price = DoubleField()
     quantity = IntegerField()
+
 
 # BOOTCAMPERS: Don't modify anything below
 ALL_MODELS = [
